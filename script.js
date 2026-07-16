@@ -3,6 +3,7 @@
 // ============================================
 
 const themeToggle = document.getElementById('themeToggle');
+const mobileThemeToggle = document.getElementById('mobileThemeToggle');
 const body = document.body;
 
 // Initialize theme from localStorage or default to dark
@@ -15,14 +16,20 @@ function initializeTheme() {
     }
 }
 
-// Toggle theme
-themeToggle.addEventListener('click', () => {
+// Toggle theme function
+function toggleTheme() {
     body.classList.toggle('light-mode');
     
     // Save preference
     const isLightMode = body.classList.contains('light-mode');
     localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
-});
+}
+
+// Desktop theme toggle
+themeToggle.addEventListener('click', toggleTheme);
+
+// Mobile theme toggle
+mobileThemeToggle.addEventListener('click', toggleTheme);
 
 // Initialize on page load
 initializeTheme();
