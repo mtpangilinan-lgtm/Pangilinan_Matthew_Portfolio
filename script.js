@@ -116,9 +116,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             e.preventDefault();
             const target = document.querySelector(href);
             
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            // Close mobile menu if open
+            if (mobileNavOverlay.classList.contains('active')) {
+                mobileMenuToggle.classList.remove('active');
+                mobileNavOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            // Smooth scroll to target with offset
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
         }
     });
@@ -233,6 +245,7 @@ const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const mobileNavOverlay = document.getElementById('mobileNavOverlay');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
+// Toggle mobile menu
 mobileMenuToggle.addEventListener('click', () => {
     mobileMenuToggle.classList.toggle('active');
     mobileNavOverlay.classList.toggle('active');
