@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio - Bento Box design with dark theme aesthetic.">
+    <title>Portfolio - Matthew T. Pangilinan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Animated background -->
+    <div class="animated-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- Header with Navigation -->
+        <header class="header">
+            <nav class="nav-container">
+                <div class="nav-brand">
+                    <span class="brand-accent">&lt;</span>MTP<span class="brand-accent">/&gt;</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-actions" id="navActions">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#journey" class="nav-link">Journey</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+                        <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <nav class="mobile-nav">
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#journey" class="mobile-nav-link">Journey</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-container" id="main-content">
+            <!-- Left Column -->
+            <section class="left-column">
+                <!-- Hero / Profile Section -->
+                <div class="hero-card">
+                    <div class="hero-avatar-wrapper">
+                        <div class="avatar-gradient-overlay"></div>
+                        <video class="hero-avatar" autoplay muted loop playsinline loading="lazy">
+                            <source src="images/vid.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <h1 class="hero-title">Matthew T. Pangilinan</h1>
+                    <p class="hero-subtitle">BSIT Specialization in Web and Mobile Applications Student</p>
+                    <div class="hero-location">
+                        <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span class="location-text">Feu Institute of Technology</span>
+                    </div>
+                    <p class="hero-bio">
+                    I build mobile-first web experiences that turn complex goals into clear, intuitive flows. 
+                    I specialize in crafting practical, high-performance interfaces where every front-end detail serves a purpose.
+                    </p>
+                </div>
+
+                <!-- About Section -->
+                <div class="bento-box about-box" id="about">
+                    <h2 class="section-title">About Me</h2>
+                    <p>
+                       I am a BSIT student at FEU Institute of Technology, specializing in Web and Mobile Applications. 
+                       My work focuses on responsive design, readable content structure, and thoughtful front-end interactions that transform student projects into functional, high-quality user experiences.
+                    </p>
+                    <p>
+                        Outside of coding, I'm an active learner who explores emerging design patterns, 
+                        contributes to open-source projects, and engages with the developer community to share knowledge and grow together.
+                    </p>
+                </div>
+
+                <!-- Tech Stack Section -->
+                <div class="bento-box tech-stack-box">
+                    <h3 class="section-title">Tech Stack</h3>
+                    
+                    <div class="tech-category">
+                        <h4 class="category-label">Front-End</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag" data-tooltip="HTML5">HTML</span>
+                            <span class="tech-tag" data-tooltip="CSS3">CSS</span>
+                            <span class="tech-tag" data-tooltip="JavaScript ES6+">JavaScript</span>
+                            <span class="tech-tag" data-tooltip="React.js">React</span>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="tech-category">
+                        <h4 class="category-label">Back-End/Services</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag" data-tooltip="Supabase">Supabase</span>
+                            <span class="tech-tag" data-tooltip="RESTful APIs">APIs</span>
+                            <span class="tech-tag" data-tooltip="Node.js">Node.js</span>
+                            <span class="tech-tag" data-tooltip="Express.js">Express.js</span>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="tech-category">
+                        <h4 class="category-label">Tools</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag" data-tooltip="Version Control">Git</span>
+                            <span class="tech-tag" data-tooltip="Code Editor">VS Code</span>
+                            <span class="tech-tag" data-tooltip="Repository Hosting">Github</span>
+                            <span class="tech-tag" data-tooltip="Design Tool">Figma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Section -->
+                <div class="bento-box" id="projects">
+                    <h2 class="section-title">Featured Projects</h2>
+
+                    <div class="projects-grid">
+
+                    <article class="project-card" data-category="web firebase">
+                        <div class="project-image">
+                            <div class="image-skeleton"></div>
+                            <img src="images/dleague.png" alt="D-League" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="https://dleagues3.vercel.app/" target="_blank" rel="noopener noreferrer" class="overlay-btn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Gentlemen's D-League Platform</h3>
+                            <p class="project-description">
+                                A dedicated sports management website featuring a digital box score and dynamic team standings dashboard. 
+                                Integrated with real-time data management to streamline administrative tasks and track league performance.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JS</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Vercel</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://dleagues3.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-btn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    View Live
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web">
+                        <div class="project-image">
+                            <div class="image-skeleton"></div>
+                            <img src="images/courtrental.png" alt="Court Rental" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="https://dolmarcourtrental.vercel.app/" target="_blank" rel="noopener noreferrer" class="overlay-btn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Court Rental System</h3>
+                            <p class="project-description">
+                                A web application designed to streamline the reservation process for a local basketball facility. 
+                                The platform features a straightforward booking interface and clearly displays dynamic pricing tiers for day and night scheduling to improve the user experience for players securing a court.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JS</span>
+                                 <span class="tag">Vercel</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://dolmarcourtrental.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-btn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    View Live
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web">
+                        <div class="project-image">
+                            <div class="image-skeleton"></div>
+                            <img src="images/llampco.png" alt="Llampco" loading="lazy">
+                            <div class="project-overlay">
+                                <a href="https://llampco.vercel.app/" target="_blank" rel="noopener noreferrer" class="overlay-btn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Llano Multi-Purpose Cooperative (LLAMPCO) Website</h3>
+                            <p class="project-description">
+                                A clear and accessible informational platform designed for LLAMPCO members and the local community. 
+                                The website establishes a digital presence to promote the cooperative's initiatives, detailing their cooperative education, responsible financial services, and community-focused programs.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JS</span>
+                                <span class="tag">Vercel</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://llampco.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-btn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    View Live
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Column -->
+            <section class="right-column">
+                <!-- Journey / Experience -->
+                <div class="bento-box journey-box" id="journey">
+                    <h2 class="section-title">My Journey</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-info">
+                                        <h4 class="timeline-role">BSIT-Web and Mobile Applications</h4>
+                                        <p class="timeline-company">Feu Institute of Technology</p>
+                                    </div>
+                                    <p class="timeline-date">2025 - Present</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="divider">
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-info">
+                                        <h4 class="timeline-role">Web Developer </h4>
+                                        <p class="timeline-company">Gentlemen's Basketball League </p>
+                                    </div>
+                                    <p class="timeline-date"> 2025 </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="divider">
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-info">
+                                        <h4 class="timeline-role">Endpoint Security</h4>
+                                        <p class="timeline-company">Cisco Network Academy</p>
+                                    </div>
+                                    <p class="timeline-date"> 2025 </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="divider">
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-info">
+                                        <h4 class="timeline-role">STEM-IT (Information Technology) Strand </h4>
+                                        <p class="timeline-company">FEU - Diliman </p>
+                                    </div>
+                                    <p class="timeline-date">2023 - 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div id="contact" class="bento-box contact-box">
+                    <h2 class="section-title">Get In Touch</h2>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="contact-name" class="form-label">Name</label>
+                            <input 
+                                type="text" 
+                                id="contact-name" 
+                                name="name" 
+                                placeholder="Your Name" 
+                                required
+                                aria-label="Name"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email" class="form-label">Email</label>
+                            <input 
+                                type="email" 
+                                id="contact-email" 
+                                name="email" 
+                                placeholder="your@email.com" 
+                                required
+                                aria-label="Email"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message" class="form-label">Message</label>
+                            <textarea 
+                                id="contact-message" 
+                                name="message" 
+                                placeholder="Your message..." 
+                                rows="4"
+                                required
+                                aria-label="Message"
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full btn-submit">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                        <p class="form-message" id="formMessage" role="alert" aria-live="polite"></p>
+                    </form>
+
+                    <!-- Social Links -->
+                    <div class="social-section">
+                        <p class="social-label">Connect with me:</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/yyyttttam1/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon" title="Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/matthew-pangilinan-90ba87380/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon" title="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/mtpangilinan-lgtm" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon" title="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Back to Top Button -->
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
